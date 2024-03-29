@@ -1,17 +1,3 @@
-code/preprocessing/CIHP_PARSING/checkpoint/
-code/preprocessing/U2Net/saved_models/
-code/preprocessing/Sleeve_Classifier/weights/
-code/preprocessing/lower_clf/weights/
-code/preprocessing/Cloth2Skeleton/weights/
-code/preprocessing/ClothSegmentation/weights/
-
-code/preprocessing/pose_filtered_Data/
-code/preprocessing/parse_filtered_Data/
-code/preprocessing/Training_Dataset/
-
-code/
-Try-on results/
-
 */runs/
 
 # Byte-compiled / optimized / DLL files
