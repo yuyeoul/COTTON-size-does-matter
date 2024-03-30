@@ -3,7 +3,6 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
 .DS_Store
-*.py[cod]
 
 # C extensions
 *.so
@@ -22,7 +21,6 @@ var/
 *.egg-info/
 .installed.cfg
 *.egg
-*.pkl
 *.pth
 *.zip
 
