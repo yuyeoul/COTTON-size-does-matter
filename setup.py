@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='main',
+    name='csdmCustom',
     version='0.0.1',
     description='COTTON-size-does-matter Custom',
     url='https://github.com/yuyeoul/COTTON-size-does-matter.git',
