@@ -14,15 +14,15 @@ import os
 import time
 import argparse
 
-from dataLoader import TryonDataset
+from csdmCustom.dataLoader import TryonDataset
 # from dataLoader_processed import TryonDataset
-from DiffAugment_pytorch import DiffAugment
+from csdmCustom.DiffAugment_pytorch import DiffAugment
 
 # from util.utils import *
 from datetime import datetime
 
-from Focal_Loss import focal_loss
-from mean_iou_evaluate import read_masks, mean_iou_score
+from csdmCustom.Focal_Loss import focal_loss
+from csdmCustom.mean_iou_evaluate import read_masks, mean_iou_score
 
 from tensorboardX import SummaryWriter
 from tqdm import tqdm
@@ -33,7 +33,7 @@ import numpy as np
 import imageio
 from pytorch_fid import fid_score
 import yaml
-from model_end2end import COTTON, FashionOn_MultiD, FashionOn_VGGLoss
+from csdmCustom.model_end2end import COTTON, FashionOn_MultiD, FashionOn_VGGLoss
 
 class fitmeMain:
     def __init__(self,dressroom_id,train_dir,data_dir):
