@@ -94,7 +94,7 @@ class TryonDataset(Dataset):
     def __init__(self, data_dir):
         super(TryonDataset,self).__init__()
         # self.config = config
-        self.mode = 'test' #train or test
+        self.mode = 'val' #train or test
         self.dataroot = data_dir if self.mode == 'train' else data_dir
         self.w = 1024
         self.h = 768
