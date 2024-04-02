@@ -27,7 +27,7 @@ from csdmCustom.mean_iou_evaluate import read_masks, mean_iou_score
 from tensorboardX import SummaryWriter
 from tqdm import tqdm
 import glob
-from unet import UNet, UNet_v2
+from csdmCustom.unet import UNet, UNet_v2
 import util.utils as utils
 import numpy as np
 import imageio
