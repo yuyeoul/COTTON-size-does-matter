@@ -68,7 +68,7 @@ setup(
 'tensorflow-io-gcs-filesystem==0.30.0',
 'termcolor==2.2.0',
 'tifffile==2023.1.23.1',
-'torch==1.13.1',
+'torch==1.13.1+cu117',
 'torchaudio==0.13.1',
 'torchvision==0.14.1',
 'tqdm==4.64.1',
