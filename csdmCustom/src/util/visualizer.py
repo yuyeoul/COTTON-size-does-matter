@@ -4,7 +4,6 @@ import ntpath
 import time
 from . import utils
 from . import html
-import torch
 
 
 class Visualizer():

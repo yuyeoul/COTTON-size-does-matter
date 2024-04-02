@@ -1,39 +1,25 @@
 import torch
-import torch.nn as nn
-import torch.optim as optim
 import torch.autograd as autograd
 
-import torch.nn.functional as F
-from torch.autograd import Variable
 from torch.utils.data import DataLoader, Dataset
-import torchvision
-
-import torchvision.transforms as transforms
 
 import os
 import time
-import argparse
 
-from csdmCustom.dataLoader import TryonDataset
+from csdmCustom.src.dataLoader import TryonDataset
 # from dataLoader_processed import TryonDataset
-from csdmCustom.DiffAugment_pytorch import DiffAugment
 
 # from util.utils import *
 from datetime import datetime
 
-from csdmCustom.Focal_Loss import focal_loss
-from csdmCustom.mean_iou_evaluate import read_masks, mean_iou_score
+from csdmCustom.src.Focal_Loss import focal_loss
 
-from tensorboardX import SummaryWriter
 from tqdm import tqdm
-import glob
-from csdmCustom.unet import UNet, UNet_v2
-import csdmCustom.util.utils as utils
+import csdmCustom.src.util.utils as utils
 import numpy as np
-import imageio
 from pytorch_fid import fid_score
-import yaml
-from csdmCustom.model_end2end import COTTON, FashionOn_MultiD, FashionOn_VGGLoss
+from csdmCustom.src.model_end2end import COTTON, FashionOn_MultiD
+
 
 class fitmeMain:
     def __init__(self,dressroom_id,train_dir,data_dir):
