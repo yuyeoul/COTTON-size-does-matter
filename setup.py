@@ -3,8 +3,8 @@ from setuptools import setup, find_packages
 setup(
     name='csdmCustom',
     version='0.0.1',
-    description='COTTON-size-does-matter Custom',
-    url='https://github.com/yuyeoul/COTTON-size-does-matter',
+    description='csdm custom',
+    url='https://github.com/yuyeoul/csdm',
     author='yuyeoul',
     author_email='yu_yeoul@naver.com',
     license='MIT',
