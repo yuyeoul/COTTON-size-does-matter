@@ -30,7 +30,7 @@ class fitmeMain:
                                    'FID_score_{}.txt'.format('val'))
         f = open(record_file, 'a')
 
-        weight_dir = os.path.join(train_dir, '/weights')
+        weight_dir = train_dir+"weights/"
         weight_path = os.path.join(weight_dir, '{}.pkl'.format(train_dir))
 
         val_folder = os.path.join(train_dir, 'val')
