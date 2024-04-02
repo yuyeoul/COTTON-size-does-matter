@@ -16,11 +16,11 @@ def size_calculator(input_size, padding=1, kernel=3, stride=1, layer=1):
 
 
 class COTTON(nn.Module):
-    def __init__(self, config):
+    def __init__(self):
         super(COTTON, self).__init__()
-        self.d_sample = config['TRAINING_CONFIG']['D_SAMPLE']
+        self.d_sample = 4
         self.parsing_G = UNet_v2(n_channels=8, n_classes=15, bilinear=False)
-        self.tryon_G = FashionOn_MultiG(ch_in=24, z_num=64, repeat_num=6,hidden_num=128, shape=config['TRAINING_CONFIG']['RESOLUTION'])
+        self.tryon_G = FashionOn_MultiG(ch_in=24, z_num=64, repeat_num=6,hidden_num=128, shape=[1024, 768])
 
         
     def forward(self, c_img, parsing_masked, human_masked, human_pose):

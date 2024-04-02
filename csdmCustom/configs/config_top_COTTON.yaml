@@ -2,7 +2,7 @@ MODEL_CONFIG:
   BODY_PART: 'top'
   VERSION: 'origin'
 
-MODE : 'train'
+MODE : 'test'
 PARSE: 'merge'
 
 TRAINING_CONFIG:

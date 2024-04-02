@@ -91,17 +91,17 @@ def get_Vec(a, b):
 
 
 class TryonDataset(Dataset):
-    def __init__(self, config):
+    def __init__(self, data_dir):
         super(TryonDataset,self).__init__()
-        self.config = config
-        self.mode = config['MODE'] #train or test
-        self.dataroot = config['TRAINING_CONFIG']['DATA_DIR'] if self.mode == 'train' else config['VAL_CONFIG']['DATA_DIR']
-        self.w = config['TRAINING_CONFIG']['RESOLUTION'][1]
-        self.h = config['TRAINING_CONFIG']['RESOLUTION'][0]
-        self.tuck = config['TUCK']
-        self.parse = config['PARSE']
+        # self.config = config
+        self.mode = 'test' #train or test
+        self.dataroot = data_dir if self.mode == 'train' else data_dir
+        self.w = 1024
+        self.h = 768
+        self.tuck = False
+        self.parse = 'merge'
         self.adj_pose = 'none' if self.mode == 'train' else 'long'
-        self.scale = config['VAL_CONFIG']['SCALE']
+        self.scale = 1
 
         self.transform = transforms.Compose([  \
                 transforms.ToTensor(),   \
