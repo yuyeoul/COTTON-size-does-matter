@@ -28,7 +28,7 @@ from tensorboardX import SummaryWriter
 from tqdm import tqdm
 import glob
 from csdmCustom.unet import UNet, UNet_v2
-import util.utils as utils
+import csdmCustom.util.utils as utils
 import numpy as np
 import imageio
 from pytorch_fid import fid_score
