@@ -96,8 +96,8 @@ class TryonDataset(Dataset):
         # self.config = config
         self.mode = 'val' #train or test
         self.dataroot = data_dir if self.mode == 'train' else data_dir
-        self.w = 1024
-        self.h = 768
+        self.w = 768
+        self.h = 1024
         self.tuck = False
         self.parse = 'merge'
         self.adj_pose = 'none' if self.mode == 'train' else 'long'
