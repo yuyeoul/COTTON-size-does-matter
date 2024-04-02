@@ -4,7 +4,7 @@ setup(
     name='csdmCustom',
     version='0.0.1',
     description='COTTON-size-does-matter Custom',
-    url='https://github.com/yuyeoul/COTTON-size-does-matter.git',
+    url='https://github.com/yuyeoul/COTTON-size-does-matter',
     author='yuyeoul',
     author_email='yu_yeoul@naver.com',
     license='MIT',
