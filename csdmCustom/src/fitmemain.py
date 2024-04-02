@@ -31,7 +31,7 @@ class fitmeMain:
         f = open(record_file, 'a')
 
         weight_dir = os.path.join(fitmeDir,'result/fitme', 'weights')
-        weight_path = os.path.join(weight_dir, '{}.pkl'.format('fitme_1'))
+        weight_path = os.path.join(weight_dir, '{}.pkl'.format('fitme'))
 
         val_folder = os.path.join(train_dir, 'val')
         GT_folder = os.path.join(val_folder, 'GT')
