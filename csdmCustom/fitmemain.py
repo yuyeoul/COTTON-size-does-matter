@@ -36,15 +36,18 @@ import yaml
 from model_end2end import COTTON, FashionOn_MultiD, FashionOn_VGGLoss
 
 class fitmeMain:
-    def __init__(self,train_dir,data_dir):
-        record_file = os.path.join('result',train_dir,
+    def __init__(self,dressroom_id,train_dir,data_dir):
+        dressroom_result_dir = "dressroomResult"
+        current_path = os.getcwd()
+        fitmeDir = current_path + "/fitme/" + dressroom_result_dir + "/" + dressroom_id + "/"
+        record_file = os.path.join(train_dir,
                                    'FID_score_{}.txt'.format('test'))
         f = open(record_file, 'a')
 
-        weight_dir = os.path.join('result', train_dir, 'weights')
+        weight_dir = os.path.join(train_dir, '/weights')
         weight_path = os.path.join(weight_dir, '{}.pkl'.format(train_dir))
 
-        val_folder = os.path.join('result', train_dir, 'test')
+        val_folder = os.path.join(train_dir, 'test')
         GT_folder = os.path.join(val_folder, 'GT')
         os.makedirs(val_folder, exist_ok=True)
         os.makedirs(GT_folder, exist_ok=True)
