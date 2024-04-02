@@ -410,6 +410,8 @@ class TryonDataset(Dataset):
         parse_upper = (parse_array == 4).astype(np.float32)
         parse_arms = (parse_array == 8) | (parse_array == 9)
 
+        print(mask_torso.shape)
+        print(parse_array.shape)
         if self.tuck:
             torso_over_neck = cv2.bitwise_and(mask_torso, (((parse_array == 3))*255).astype(np.uint8))
         else:    
