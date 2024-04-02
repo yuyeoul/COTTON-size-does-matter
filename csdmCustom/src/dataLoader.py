@@ -421,7 +421,7 @@ class TryonDataset(Dataset):
         pbg = torch.from_numpy(parse_bg)
         pbg.unsqueeze_(0) 
 
-        if (self.mode == 'train' and random.random() > 0.5) or (self.mode != 'train' and self.config['VAL_CONFIG']['MASK_ARM']):
+        if (self.mode == 'train' and random.random() > 0.5) or (self.mode != 'train'):
             # Mask arms
             r = 8
             for parse_id, pose_ids in [(8, [2, 5, 6, 7]), (9, [5, 2, 3, 4])]:
