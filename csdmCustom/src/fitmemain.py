@@ -25,13 +25,13 @@ class fitmeMain:
     def __init__(self,dressroom_id,train_dir,data_dir):
         dressroom_result_dir = "dressroomResult"
         current_path = os.getcwd()
-        fitmeDir = current_path + "/fitme/" + dressroom_result_dir + "/" + dressroom_id + "/"
+        fitmeDir = current_path + "/fitme/" + dressroom_result_dir + "/" + dressroom_id
         record_file = os.path.join(train_dir,
                                    'FID_score_{}.txt'.format('val'))
         f = open(record_file, 'a')
 
-        weight_dir = train_dir+"weights/"
-        weight_path = os.path.join(weight_dir, '{}.pkl'.format(train_dir))
+        weight_dir = os.path.join(fitmeDir,'result/fitme', 'weights')
+        weight_path = os.path.join(weight_dir, '{}.pkl'.format('fitme_1'))
 
         val_folder = os.path.join(train_dir, 'val')
         GT_folder = os.path.join(val_folder, 'GT')
