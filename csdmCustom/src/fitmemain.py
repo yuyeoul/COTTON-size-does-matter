@@ -55,9 +55,7 @@ class fitmeMain:
                 break
             checkpoint = torch.load(weight_name, map_location='cpu')
 
-            fid_pred_folder = os.path.join(val_folder, '{}'.format(e)) if False else os.path.join(val_folder,
-                                                                                                           '{}_untucked'.format(
-                                                                                                               e))
+            fid_pred_folder = os.path.join(val_folder, '{}'.format(e)) 
             os.makedirs(fid_pred_folder, exist_ok=True)
 
             epoch_num = checkpoint['epoch']
